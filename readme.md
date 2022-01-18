@@ -43,7 +43,7 @@ See [requirements.txt](./requirements.txt), tested on macOS and Linux platforms.
    
 ```shell script
 git clone https://github.com/cleardusk/3DDFA_V2.git
-cd 3DDFA_V2
+cd TDDFA_V2
 ```
 
 2. Build the cython version of NMS, Sim3DR, and the faster mesh render

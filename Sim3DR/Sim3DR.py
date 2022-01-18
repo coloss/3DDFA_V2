@@ -24,6 +24,11 @@ def rasterize(vertices, triangles, colors, bg=None,
 
     if colors.dtype != np.float32:
         colors = colors.astype(np.float32)
+    bg = np.ascontiguousarray(bg)
+    vertices = np.ascontiguousarray(vertices)
+    triangles = np.ascontiguousarray(triangles)
+    colors = np.ascontiguousarray(colors)
+    # buffer = np.ascontiguousarray(buffer)
     Sim3DR_Cython.rasterize(bg, vertices, triangles, colors, buffer, triangles.shape[0], height, width, channel,
                             reverse=reverse)
     return bg

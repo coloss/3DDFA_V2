@@ -87,7 +87,7 @@ def main(args):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='The demo of video of 3DDFA_V2')
+    parser = argparse.ArgumentParser(description='The demo of video of TDDFA_V2')
     parser.add_argument('-c', '--config', type=str, default='configs/mb1_120x120.yml')
     parser.add_argument('-f', '--video_fp', type=str)
     parser.add_argument('-m', '--mode', default='cpu', type=str, help='gpu or cpu mode')

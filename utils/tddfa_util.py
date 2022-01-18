@@ -46,6 +46,7 @@ class ToTensorGjz(object):
         if isinstance(pic, np.ndarray):
             img = torch.from_numpy(pic.transpose((2, 0, 1)))
             return img.float()
+        return pic
 
     def __repr__(self):
         return self.__class__.__name__ + '()'

@@ -154,6 +154,10 @@ def draw_landmarks(img, pts, style='fancy', wfp=None, show_flag=False, **kwargs)
 
     if show_flag:
         plt.show()
+    # # Now we can save it to a numpy array.
+    # data = np.fromstring(plt.gcf().canvas.tostring_rgb(), dtype=np.uint8, sep='')
+    # data = data.reshape(plt.gcf().canvas.get_width_height()[::-1] + (3,))
+    return
 
 
 def cv_draw_landmark(img_ori, pts, box=None, color=GREEN, size=1):

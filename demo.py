@@ -66,7 +66,7 @@ def main(args):
     elif args.opt == '2d_dense':
         draw_landmarks(img, ver_lst, show_flag=args.show_flag, dense_flag=dense_flag, wfp=wfp)
     elif args.opt == '3d':
-        render(img, ver_lst, tddfa.tri, alpha=0.6, show_flag=args.show_flag, wfp=wfp)
+        render(img, ver_lst, tddfa.tri, alpha=0.6, show_flag=args.show_flag, wfp=wfp, with_bg_flag=False)
     elif args.opt == 'depth':
         # if `with_bf_flag` is False, the background is black
         depth(img, ver_lst, tddfa.tri, show_flag=args.show_flag, wfp=wfp, with_bg_flag=True)
@@ -85,7 +85,7 @@ def main(args):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='The demo of still image of 3DDFA_V2')
+    parser = argparse.ArgumentParser(description='The demo of still image of TDDFA_V2')
     parser.add_argument('-c', '--config', type=str, default='configs/mb1_120x120.yml')
     parser.add_argument('-f', '--img_fp', type=str, default='examples/inputs/trump_hillary.jpg')
     parser.add_argument('-m', '--mode', type=str, default='cpu', help='gpu or cpu mode')
